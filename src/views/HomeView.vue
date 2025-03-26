@@ -1,4 +1,5 @@
 <template>
+  <headerImg />
   <div id="icon-girassol">
         <img src="/img/icone-girasssol.png" alt="Um girassol">
       </div>
