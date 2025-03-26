@@ -1,7 +1,8 @@
 <template>
   <nav>
-        <RouterLink class="link" to="/">Home</RouterLink>
-        <RouterLink class="link" to="/colunas">Colunas</RouterLink>
+        <RouterLink v-show= "home" class="link" to="/">Home</RouterLink>
+        <RouterLink v-show= "colunas" class="link" to="/colunas">Colunas</RouterLink>
+        <RouterLink v-show = "curio" class="link" to="/curiosidades">Curiosidades</RouterLink>
       </nav>
 </template>
 
@@ -10,6 +11,12 @@ import {RouterLink} from 'vue-router'
 export default {
     components:{
         RouterLink
+    },
+    props: {
+        home: Boolean,
+        colunas: Boolean,
+        curio: Boolean,
+
     }
 }
 </script>
