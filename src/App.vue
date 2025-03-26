@@ -1,6 +1,6 @@
 <template>
   <header>
-    <headerImg />
+
     <navBarVue />
   </header>
 

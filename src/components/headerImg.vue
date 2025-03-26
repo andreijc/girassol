@@ -24,11 +24,7 @@ div {
 
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-end;    
 }
 
-
-img {
-  max-width: 100px;
-}
 </style>
