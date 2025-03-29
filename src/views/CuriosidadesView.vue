@@ -7,11 +7,15 @@
     
     />
     <article>
-      <div class="molduraAnimada" @click="defCor">
+      <div class="molduraAnimada"
+      :style="{backgroundColor: cor
+      }"
+       >
+      
       <img src="/img/girassol-vanGoh.jpg" alt="O quadro girrasois de Vicent Van GoH, girassois em uma vaso" id="girassol-vanGoh">
       </div>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quam nobis quibusdam doloribus quas molestias deserunt ipsam eius a culpa consectetur dignissimos id maxime, repellendus reiciendis earum, hic tempore, labore saepe fugiat. Facere possimus ullam cupiditate placeat earum veniam ipsum temporibus, hic sequi sapiente, libero iure maxime, corporis perspiciatis vitae aliquid minus provident nulla eligendi nobis nemo. Dolorem, perspiciatis sint.</p>
-      <p>{{ cor }}</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure sunt neque nihil sed eaque. Quo quisquam accusantium cum facere veniam voluptas dolorum corrupti unde nisi eaque incidunt, obcaecati nostrum aspernatur!</p>
+      
     </article>
     <article>
       <div class="molduraAnimada">
@@ -37,23 +41,28 @@ export default {
         curio: false,
         colunas: true
       },
-      cor: Number,
+      cores:[
+            'var(--cor1)',
+            'var(--cor2)',
+            'var(--cor3)',
+            'var(--cor4)',
+            'var(--cor5)',],
+      cor: String,
+      index: Number,
     }
   },
   methods:{
-   GerarCor(){
-    this.cor = Math.floor(Math.random()* 5 + 1)
-    Math.floor(this.cor)
-    console.log(this.cor)
+   gerarCor(){
+   this.cor = this.cores[Math.floor(Math.random()* this.cores.length)]
    },
 
    defCor(){
-    setInterval(this.GerarCor, 1000)
+    setInterval(this.gerarCor, 2000)
    }
 
   },
   mounted(){
-    this.defCo
+    this.defCor()
   }
 }
 
@@ -69,7 +78,7 @@ article{
 }
 
 .molduraAnimada{
-  background-color: aquamarine;
+  transition: 1.5s background-color ease;
   widows: 250px;
   padding: 10px;
 }
