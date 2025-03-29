@@ -1,5 +1,10 @@
 <template>
   <headerImg />
+  <NavBar
+    :home="nav.home" 
+    :colunas="nav.colunas"
+    :curio="nav.curio"
+    />
   <div id="icon-girassol">
         <img  :class="{giro: status_giro}" @click="gira" src="/img/icone-girasssol.png" alt="Um girassol">
   </div>
@@ -31,7 +36,12 @@ export default {
   data() {
     return {
       status_giro: false,
-      status_letra: false
+      status_letra: false,
+      nav: {
+        home: false,
+        colunas: true,
+        curio: true
+      }
     }
     
   },
