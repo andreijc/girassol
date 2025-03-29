@@ -1,16 +1,10 @@
 <template>
-<<<<<<< HEAD
-  <div class="about">
-      </div>
-</template>
-=======
   <section>
     <NavBar
     :home="nav.home" 
     :colunas="nav.colunas"
     :curio="nav.curio"
     />
->>>>>>> home
 
   </section>
 </template>
